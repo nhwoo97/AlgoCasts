@@ -7,6 +7,19 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+  //Palindrones need to be the same word even after reversing the string
+  //Turn into array
+  //reverse
+  //turn into string
+  //compare with original
+  //return true or false depending on if they are the same
+  rev = [...str].reverse().join("");
+  if (rev == str) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 module.exports = palindrome;
