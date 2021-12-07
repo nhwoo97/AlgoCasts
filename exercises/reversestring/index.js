@@ -11,6 +11,7 @@ function reverse(str) {
   for (let i of str) {
     newStr = i + newStr;
   }
+
   return newStr;
 }
 
