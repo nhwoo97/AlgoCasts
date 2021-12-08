@@ -14,6 +14,7 @@ function palindrome(str) {
   //turn into string
   //compare with original
   //return true or false depending on if they are the same
+
   rev = [...str].reverse().join("");
   if (rev == str) {
     return true;
