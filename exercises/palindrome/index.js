@@ -9,11 +9,12 @@
 
 function palindrome(str) {
   //Palindrones need to be the same word even after reversing the string
-  //Turn into array
+  //Turn into array using deconstructing
   //reverse
   //turn into string
   //compare with original
   //return true or false depending on if they are the same
+
   rev = [...str].reverse().join("");
   if (rev == str) {
     return true;
