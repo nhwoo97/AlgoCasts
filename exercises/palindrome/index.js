@@ -9,7 +9,7 @@
 
 function palindrome(str) {
   //Palindrones need to be the same word even after reversing the string
-  //Turn into array
+  //Turn into array using deconstructing
   //reverse
   //turn into string
   //compare with original
