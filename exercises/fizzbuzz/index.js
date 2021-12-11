@@ -16,6 +16,7 @@ function fizzBuzz(n) {
   // if the number is divisible by 3, do fizz
   //If it is divisible by 5 do buzz
   // for both return fizzbuzz
+  // use loop to iterate over till you reach the value n
   for (i = 1; i < n + 1; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
       console.log("fizzbuzz");
