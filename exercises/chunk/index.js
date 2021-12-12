@@ -9,13 +9,20 @@
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 function chunk(array, size) {
+  //Use a while loop to splice up to the size given
+  //then load the spliced part into value newArr
+
   let newArr = [];
   while (size <= array.length) {
     temp = array.splice(0, size);
     newArr.push(temp);
     temp = [];
   }
-  newArr.push(array);
+
+  if (array.length > 0) {
+    newArr.push(array);
+  }
+
   return newArr;
 }
 console.log(chunk([1, 2, 3, 4], 2));
