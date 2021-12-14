@@ -21,24 +21,24 @@ function anagrams(stringA, stringB) {
     return false;
   }
 
-  hashA = {};
-  hashB = {};
+  hashA = hashMapHelper(a);
+  hashB = hashMapHelper(b);
 
-  for (const element of a) {
-    if (!hashA[element]) {
-      hashA[element] = 1;
-    } else {
-      hashA[element] = hashA[element] + 1;
-    }
-  }
+  // for (const element of a) {
+  //   if (!hashA[element]) {
+  //     hashA[element] = 1;
+  //   } else {
+  //     hashA[element] = hashA[element] + 1;
+  //   }
+  // }
 
-  for (const element of b) {
-    if (!hashB[element]) {
-      hashB[element] = 1;
-    } else {
-      hashB[element] = hashB[element] + 1;
-    }
-  }
+  // for (const element of b) {
+  //   if (!hashB[element]) {
+  //     hashB[element] = 1;
+  //   } else {
+  //     hashB[element] = hashB[element] + 1;
+  //   }
+  // }
 
   for (const key in hashA) {
     if (!hashB[key]) {
@@ -51,6 +51,18 @@ function anagrams(stringA, stringB) {
   }
 
   return true;
+}
+
+function hashMapHelper(string) {
+  hashedString = {};
+  for (const element of string) {
+    if (!hashedString[element]) {
+      hashedString[element] = 1;
+    } else {
+      hashedString[element] = hashedString[element] + 1;
+    }
+  }
+  return hashedString;
 }
 
 module.exports = anagrams;
