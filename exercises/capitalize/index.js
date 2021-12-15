@@ -7,6 +7,22 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+function capitalize(str) {
+  //Iterate through each character in the string
+  //Everytime there is a whitespace before, capitalize that letter
+  //Save the new string to newStr
+  let arr = str.split("");
+  newString = "";
+  for (let i in arr) {
+    if (arr[i - 1] === " ") {
+      newString = newString + arr[i].toUpperCase();
+    } else if (i == 0) {
+      newString = newString + arr[i].toUpperCase();
+    } else {
+      newString = newString + arr[i];
+    }
+  }
+  return newString;
+}
 
 module.exports = capitalize;
