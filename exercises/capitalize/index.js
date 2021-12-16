@@ -11,7 +11,7 @@ function capitalize(str) {
   //Iterate through each character in the string
   //Everytime there is a whitespace before, capitalize that letter
   //Save the new string to newStr
-  //Alternatively, you can split the string with each word being part of the array
+  //Alternatively, you can save each word as an array material
   let arr = str.split("");
   newString = "";
   for (let i in arr) {
