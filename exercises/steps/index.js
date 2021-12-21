@@ -17,6 +17,19 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  if (n <= 0) {
+    return;
+  }
+
+  //i dictates how many #s there are
+  i = 1;
+  while (i < n || i === n) {
+    let pounds = Array(i + 1).join("#");
+    let spaces = Array(n - i + 1).join(" ");
+    console.log(pounds + spaces);
+    i++;
+  }
+}
 
 module.exports = steps;
